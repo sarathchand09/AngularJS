@@ -1,0 +1,5 @@
+[{"no": 1, "tech": "AngularJS", "done": false},
+{"no": 2, "tech": "BootStrap", "done": true},
+{"no": 3, "tech": "HTML",      "done": true},
+{"no": 4, "tech": "JavaScript","done": true},
+{"no": 5, "tech":"PLSQL",      "done":false}]

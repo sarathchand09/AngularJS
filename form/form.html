@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="validateForm.js"></script>
+      <style>
+        /*input,label{
+                display:inline-block;
+                width:150px;
+             }*/
+        </style>
+    </head>
+    <body ><!--jumbotron text-center-->
+        <form class="form-horizontal">
+        <div class="container-fluid">
+        <h2>Sign Up To Become Member</h2>
+            <div class="form-group">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="search for text">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                </span>
+            </div><br/><br/>
+            <label class="col-xs-2 control-label" for="firstname">FirstName:</label>
+                <div class="col-xs-4">
+                <input class="form-control" type="text" id="firstname" placeholder="firstName" name="firstname"><br/>
+                </div>
+                </div>
+            <div class="form-group">
+            <label class="col-xs-2 control-label" for="lastname">LastName:</label>
+                <div class="col-xs-4">
+                <input type="text" class="form-control" id="lastname" placeholder="lastName" name="lastname"><br/>
+                </div>
+            </div>
+            <div class="form-group">
+            <label class="col-xs-2 control-label" for="age">age:</label>
+                <div class="col-xs-4">
+                <input class="form-control" type="text" id="age" placeholder="age" name="age"><br/>
+                </div>
+            </div>
+            <div class="form-group">
+            <label class="col-xs-2 control-label" for="mobile">Mobile:</label>
+                <div class="col-xs-4">
+                <input class="form-control" type="number" id="mobile" placeholder="mobile" name="mobile"><br/>
+                </div></div>
+            <div class="form-group">
+            <label class="col-xs-2 control-label" for="email">Email:</label>
+                <div class="col-xs-4">
+                <input class="form-control" type="email" id="email" placeholder="email" name="email"><br/>
+                </div></div>
+            <div class="col-xs-4 col-xs-offset-2">
+            <label  class="radio-inline">
+            <input type="radio" name=sex value="male">Male
+                </label>
+            <label class="radio-inline">
+            <input type="radio" name=sex value="female">Female
+                </label>
+            
+            <label class="radio-inline">
+            <input type="radio" name=sex value="others">Others
+                </label>
+            </div>
+            <br/><br/>
+            <div class="col-xs-4 col-xs-offset-2">
+                <button class="btn btn-info" class="form-control" type="submit" onclick="formValidate()">
+                    <span class="glyphicon glyphicon-user"></span>Submit</button>
+            </div>
+            </div>
+            </form>
+    </body>
+</html>

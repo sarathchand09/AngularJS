@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Addition App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="application/javascript" src="tableChanger.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2>Click On ADD Button To Update Table</h2> </div>
+    </div>
+    </br>
+    <div class="form-group">
+        <div class="container col-md-4 col-md-offset-2">
+            <div class="input-group">
+                <input type="text" placeholder="add item" id="data" class="form-control"> <span class="input-group-btn">
+                <button class="btn btn-info" type="button" onclick="addRow()">ADD</button>
+            </span> </div>
+            </br>
+        </div>
+        <div class="container col-sm-6 col-sm-offset-2">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Technology</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr>
+                        <td>1</td>
+                        <td>BootStrap</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project 1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+          .bgimage{
+              background-image: url(reptiles.jpg);
+              background-position: center center;
+              background-size: cover;
+              height: 150px;
+          }
+          .icon{
+              max-width: 150px;
+              margin: 0 auto;
+              display: block;
+          }
+          .services{
+              text-align: center;
+          }
+        </style>
+    </head>
+   <body>
+       <header class="bgimage">
+           <div class="container">
+           <h1>HeadLine</h1>
+               </div>
+       </header>
+       <br/>
+       <div class="services container-fluid">
+           <div class="row">
+        <div class="col-md-4">
+            <img class="icon" class="img-responsive" src="icon-health.svg" alt="Icon"><br/>
+       <p>this is a <mark>paragraph typed </mark>and included here to test the bootstrap container,this is much needed
+       and <strong>this also helps to understand </strong>how the <abbr title="Bootstrap">bsp</abbr> container works and this is cool to type you know!!</p>
+           </div>
+           
+            <div class="col-md-4">
+                <img class="icon" src="icon-grooming.svg" alt="Icon"><br/>       
+                <p>test the bootstrap container,this is much needed
+       and this also helps to understand how the bootstrp container works and this is cool to type you know!!</p>
+           </div>
+           <div class="clearfix visible-sm-inline-block"></div>
+            <div class="col-md-4">
+                <img class="icon" src="icon-nutrition.svg" alt="Icon"><br/>       
+                <p>this is a paragraph typed and included here to test the bootstrap container,this is much needed!!</p>
+           </div>
+            </div>              
+       </div>
+       <br/><br/>
+       <table class="table table-bordered">
+           <thead>
+               <tr>
+                   <th>Tech</th>
+                   <th>Interest</th>
+                   <th>Description</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr class="active">
+                   <td>BootStrap</td>
+                   <td>Yes</td>
+                   <td>It makes website responsive,also reduces dev efforts on CSS.</td>
+               </tr>
+               <tr class="success">
+                   <td>HTML</td>
+                   <td>Yes</td>
+                   <td>It has tags which will define the whole web page,its easy to learn.</td>
+               </tr>
+               <tr class="info">
+                   <td>JavaScript</td>
+                   <td>Yes</td>
+                   <td>It makes the web page dynamic,its everything for a website now-a-days.</td>
+               </tr>
+                <tr class="danger">
+                   <td>AngularJS</td>
+                   <td>Yes</td>
+                   <td>It makes JavaScript coding easier,its a JS FrameWork.</td>
+               </tr>
+           </tbody>
+       </table> <br/>
+    </body>
+</html>
+
+
+<!-- 
+
+1. container - fluid and fixed
+2.rows - without padding
+3.columns - col-md-12 (md=medium), col-xs-12
+4. multiple columns - col-sm-6(sm=small) = this is good as it shrinks slowly from 3 to  2 to finally 1 column..but not directly one column. and col-lg-2( lg=large),large breakpoint,means when window is larg,all columns come to same row.
+5. fixing breakpoint problems like with diff size of text then use clearfix visible-sm-block..
+6. need to understand offsets.
+7.using col-xs-4(total 12 columns for col,each will use 4)..irrespective of size,you will always have 3 in a row.
+8.depending on break points you can change your image positioins using push and pulls col-sm-push...
+-->

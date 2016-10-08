@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <title>Table Addition App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="angular.js"></script>
+    <script type="application/javascript" src="app.js"></script>
+</head>
+
+<body ng-controller="myctrl" >
+    <div class="container" ng-init="showdata()">
+        <div class="page-header">
+            <h2>Click On Add Button To Update Table <span class="lable label-default" ng-class="warninglevel()" ng-hide="IncompleteTechnologies()==0">{{IncompleteTechnologies()}}</span></h2> </div>
+    </div>
+    </br>
+    <div class="form-group">
+        <div class="container col-md-4 col-md-offset-2">
+            <div class="input-group">
+                <input type="text" placeholder="add item" id="data" class="form-control" ng-model="additem"> <span class="input-group-btn">
+                <button class="btn btn-info" type="button" ng-click="addnewitem(additem)">ADD</button>
+            </span> </div>
+            </br>
+        </div>
+        <div class="container col-sm-6 col-sm-offset-2">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+<!--                        <th>S.No</th>-->
+                        <th>Technology</th>
+                        <th>Check</th>
+                        <th>Done</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+                    <tr ng-repeat="value in data | checkedItems:showcomplete | orderBy:'tech'">
+<!--                        <td>{{value.no}}</td>-->
+                        <td>{{value.tech}}</td>
+                        <td><input type="checkbox" ng-model="value.done"> </td>
+                        <td>{{value.done}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="checkbox-inline">
+                <label><input type="checkbox" ng-model="showcomplete"> show all technologies</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
