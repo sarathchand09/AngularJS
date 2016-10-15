@@ -1,0 +1,77 @@
+<style>
+    /*.ng-valid{ background-color: lightpink; }
+    .ng-invalid{ background-color: lightgreen; }*/
+    span.error { color: red; font-weight: bold; }
+</style>
+
+<h2>CheckOut Now</h2>
+<p>Please enter your details, and we'll ship your goods right away!</p>
+
+<form name="shippingForm" class="form-horizontal">
+ <div class="container-fluid">
+ <div class="col-xs-6">
+<div class="well">
+    <h3>Ship To</h3>
+    </br>
+<div class="form-group">
+    <label class="col-xs-2 control-label">Name</label>
+    <div class="col-xs-4">
+    <input name="name" type="text" class="form-control" ng-model="data.shipping.name" required>
+    </div>
+    <span class="error" ng-show="shippingForm.name.$error.required">Please enter a proper name</span>
+</div>
+
+<div class="form-group">
+    <label class="col-xs-2 control-label">street address</label>
+     <div class="col-xs-4">
+    <input name="street" type="text" class="form-control" ng-model="data.shipping.street" required>
+    </div>
+    <span class="error" ng-show="shippingForm.street.$error.required"></span>
+</div>
+
+<div class="form-group">
+    <label class="col-xs-2 control-label">City</label>
+     <div class="col-xs-4">
+    <input name="city" class="form-control" ng-model="data.shipping.city" required />
+    </div>
+    <span class="error" ng-show="shippingForm.city.$error.required">Please enter a city</span>
+</div>
+
+<div class="form-group">
+<label class="col-xs-2 control-label">State</label>
+ <div class="col-xs-4">
+<input name="state" class="form-control" ng-model="data.shipping.state" required />
+    </div>
+<span class="error" ng-show="shippingForm.state.$error.required">Please enter a state</span>
+</div>
+
+<div class="form-group">
+<label class="col-xs-2 control-label">Zip</label>
+ <div class="col-xs-4">
+<input name="zip" class="form-control" ng-model="data.shipping.zip" required />
+    </div>
+<span class="error" ng-show="shippingForm.zip.$error.required">Please enter a zip code</span>
+</div>
+
+<div class="form-group">
+<label class="col-xs-2 control-label">Country</label>
+ <div class="col-xs-4">
+<input name="country" class="form-control" ng-model="data.shipping.country" required />
+    </div>
+<span class="error" ng-show="shippingForm.country.$error.required">Please enter a country</span>
+</div>
+
+<div class="checkbox">
+<label class="col-xs-4 control-label">
+<input name="giftwrap" type="checkbox" ng-model="data.shipping.giftwrap" />
+Gift wrap these items
+</label>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-primary" ng-disabled="shippingForm.$invalid" ng-click="sendOrder(data.shipping)">Complete Order</button>
+</div>
+</div>
+</div>
+</div>
+</form>
